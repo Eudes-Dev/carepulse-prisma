@@ -35,10 +35,11 @@ model User {
   phone String?
   patient Patient?
 }
-
+ 
 model Patient {
   id String @id @default(uuid())
-  gender String @default("male")
+  gender Gender 
+  birthDate DateTime
   address String
   occupation String
   emergencyContactName String
@@ -53,6 +54,7 @@ model Patient {
   identificationType String?
   identificationNumber String?
   identificationDocument String?
+  disclosureConsent Boolean
   privacyConsent Boolean
   appointments Appointment[]
   createdAt DateTime @default(now())
