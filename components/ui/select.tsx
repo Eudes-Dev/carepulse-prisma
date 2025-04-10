@@ -98,7 +98,7 @@ function SelectLabel({
   )
 }
 
-function SelectItem({
+function SelectItem({ 
   className,
   children,
   ...props
